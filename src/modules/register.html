@@ -1,0 +1,111 @@
+<!doctypehtml>
+<html class="no-js" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>一块投吧</title>
+    <meta name="description"
+          content="We founded Geek Zoo Studio in 2009. Since then, we've launched over hundreds of web sites and mobile apps. We provide our clients with holistic solutions that include visual identity, user interface, information architecture, logic flow, user experience, visual effects, front-end coding, and programming framework, we believe that passion, ingenuity and flexibility has been the key to our continued success.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+     <!--[if lte IE 8]>
+    <script src="../dist/js/respond.min.js"></script>
+    <script src="../dist/js/html5shiv.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+    <header>
+         <nav class="navbar navbar-bg-color" role="navigation">
+                <div class="navbar-header navbar-bar">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand left" href="index.html"><img src="../img/logo.png" alt="" class="mg-t-f-5"> </a>
+                </div>    
+        </nav>
+    </header>
+    <div class="main">
+        <div class="main-form">
+              <div class="form-horizontal">
+                <fieldset>
+                    <p class="form-title">用户注册</p>
+                 
+                    <div class="control-group">
+                          <label class="control-label" for="input01">手机号</label>
+                          <div class="controls">
+                            <input type="text"  class="form-control" name="mobile" id="mobile" maxlength="11" autocomplete="off">
+                            <div class="tip" id="mobileError"><img src="../img/warning.png" alt=""><span id="errorMsgTel"></span></div>
+                          </div>
+                    </div>
+
+                    <div class="control-group">
+                          <label class="control-label">验证码</label>
+                          <div class="controls">
+                            <div class="input-append">
+                              <input class="form-control form-code" type="text" name="mobileCode" id="mobileCode" autocomplete="off">
+                              <a class="btn form-code-btn" id="getMobileCode">获取验证码</a>
+                               <div class="tip" id="codeError"><img src="../img/warning.png" alt=""><span id="errorMsgCode"></span></div>
+                            </div>
+                          </div>
+                    </div>
+
+                     <div class="control-group">
+                          <label class="control-label">密码</label>
+                          <div class="controls">
+                            <input type="password"  class="form-control" name="userpwd" id="userpwd" placeholder="密码不能少于6位数,可以包含英文和特殊字符">
+                            <div class="tip" id="pwdError"><img src="../img/warning.png" alt=""><span id="errorMsgPwd"></span></div>
+                          </div>
+                    </div>
+
+                     <div class="control-group">
+                          <label class="control-label">确认密码</label>
+                          <div class="controls">
+                            <input type="password" class="form-control"  name="repwd" id="repwd" placeholder="密码不能少于6位数,可以包含英文和特殊字符">
+                            <div class="tip" id="repwdError"><img src="../img/warning.png" alt=""><span id="errorMsgRepwd"></span></div>
+                          </div>
+                    </div>
+                    <div class="control-group">
+                          <label class="control-label">国家</label>
+                          <div class="controls">
+                              <div class="btn-group">
+                                 <button type="button" class="btn select select-w-359 f-l" data-toggle="dropdown">中国</button>
+                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                     <span class="caret"></span>
+                                     <span class="sr-only">切换下拉菜单</span>
+                                 </button>
+                                 <ul class="dropdown-menu" role="menu">
+                                     <li><a>中国</a></li>
+                                     <li><a>美国</a></li>
+                                     <li><a>韩国</a></li>
+                                     <li><a>日本</a></li>
+                                 </ul>
+                              </div>
+                          </div>
+                    </div>
+                    <p class="control-span">点击注册表示同意<span class="font-cl-3EC9A7"><a href="serviceRegister.html" target="_blank">《注册协议》</a></span></p>
+                    <div class="control-group"> 
+                          <div class="controls">
+                            <button class="btn  control-btn"  onclick="saveUser('signup')">注册</button>
+                          </div>
+                    </div>
+                    <p class="tx-center font-se-16 mg-t-30">已有账号？<span class="font-cl-3EC9A7"><a href="login.html">现在登录</a></span></p>
+
+                </fieldset>
+              </div>
+
+        </div>
+    </div>
+<script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/common/common.js"></script>
+<script type="text/javascript" src="../js/register.js"></script>
+</body>
+</html>

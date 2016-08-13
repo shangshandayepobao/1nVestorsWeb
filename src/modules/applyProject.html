@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>一块投吧</title>
+    <meta name="description" content="We founded Geek Zoo Studio in 2009. Since then, we've launched over hundreds of web sites and mobile apps. We provide our clients with holistic solutions that include visual identity, user interface, information architecture, logic flow, user experience, visual effects, front-end coding, and programming framework, we believe that passion, ingenuity and flexibility has been the key to our continued success.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/umeditor/_css/umeditor.css">
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../js/applyProject.js"></script>
+    <!--[if lte IE 8]>
+    <script src="../dist/js/respond.min.js"></script>
+    <script src="../dist/js/html5shiv.js"></script>
+
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top bg-cl-474C52" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand left" href="index.html"><img src="../img/logo.png" alt="" class="mg-t-f-5"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="createProject.html">发起项目</a></li>
+                        <li  class="active"><a>节目报名</a></li>
+                        <li class="search-nav">
+                            <span class="search-icon"><img src="../img/search.png"></span>
+                            <input type="text" class="form-control  search-input">
+                        </li>
+                        <li><a href="login.html" class="mg-t-f-2"><img src="../img/profile.png"  href="login.html"></a></li>
+                        <li><img src="../img/message.png" class="mg-t-5"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="creat-project">
+        <span class="top">
+            <ul class="nav nav-tabs font-se-14">
+                <li role="presentation" class="active">1.帮助与须知</li>
+                <img src="../img/bar.png" alt="">
+                <li role="presentation">2.填写信息</li>
+                <img src="../img/bar.png" class="img2" alt="">
+                <li role="presentation">3.完成</li>
+            </ul>
+        </span>
+        <!--=====================帮助与须知=======================-->
+        <div class="first">
+            <div class="help-info">
+                <div class="help-title">《一块投吧》节目报名须知</div>
+                <div class="help-content">
+                    <ol class="help-list">
+                        <li>项目标准
+                            <ul>
+                                <li>项目需要有百姓触点，需要是和百生活息息相关的 to C 类项目。</li>
+                                <li>项目最好完成天使轮融资，进入Pre A/ A轮融资（或者有良好发展前景的天使轮项目）。</li>
+                                <li>项目最好是前瞻性行业，改变现有生活方式、习惯或对同行业有引领作用。</li>
+                                <li>有社会意义的项目（公益类）。</li>
+                            </ul>
+                        </li>
+                        <li>项目类型
+                            <ul>
+                                <li>TMT</li>
+                                <li>医疗健康</li>
+                                <li>节能环保</li>
+                                <li>高新科技</li>
+                                <li>先进制造</li>
+                                <li>新材料</li>
+                                <li>新能源</li>
+                                <li>文创类</li>
+                                <li>公益类</li>
+                                <li>创客等领域</li>
+                            </ul>
+                        </li>
+                        <li>项目创始人
+                            <ul>
+                                <li>创始人表达能力好，或团队中有善于表达的成员。</li>
+                                <li>有明星投资人投资的项目，优先考虑。</li>
+                                <li>节目录制前后 3 个月，不得参加其他同类型卫视节目</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+             <div class="agree-help">
+                <input type="checkbox" id="checkbox-help" class="f-l" checked="true"  name="checkVal" />
+                <label for="checkbox-help" class="f-l"></label>
+                <p class="f-l">我已阅读并同意 <a  class="font-cl-3EC9A7">《帮助与须知》</a></p>
+
+                <button class="btn btn-w-180 f-r" id="applybtn">确认报名</button>
+            </div>
+
+        </div>
+        <!--=====================填写资料=======================-->
+        <div class="second" style="display:none;">
+            <form class="form-horizontal" enctype="multipart/form-data">
+                <!---==================创始人基本信息============-->
+                <div class="second-label">创始人基本信息</div>
+                <div class="control-group input-w-260 f-l mg-r-20">
+                      <label class="control-label">姓名<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control" name="originName" id="originName">
+                          <div class="tip" id="nameError"></div>
+                      </div>
+                </div>
+                <div class="control-group input-w-260  f-l mg-r-20">
+                      <label class="control-label">年龄<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control"  name="originAge" id="originAge">
+                          <div class="tip" id="ageError" ></div>
+                      </div>
+                </div>
+                <div class="control-group input-w-260  f-l">
+                      <label class="control-label">性别<i>*</i></label>
+                      <div class="control">
+                          <span class="sex selected">男</span>
+                          <span class="sex">女</span>
+                      </div>
+                </div>
+                <div class="control-group input-w-260 f-l mg-r-20">
+                      <label class="control-label">手机号<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control" maxlength="11" name="mobile" id="mobile">
+                          <div class="tip" id="mobileError" ></div>
+                      </div>
+                </div>
+                <div class="control-group input-w-260 f-l mg-r-20">
+                      <label class="control-label">Email<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control" name="email" id="email">
+                          <div class="tip" id="emailError"></div>
+                      </div>
+                </div>
+                <div class="control-group input-w-260 f-l">
+                      <label class="control-label">微信<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control" name="wechat" id="wechat">
+                          <div class="tip" id="wechatError"></div>
+                      </div>
+                </div>
+                <div class="clear"></div>
+                <!---==================项目基本信息============-->
+
+                <div class="second-label pd-t-55">项目基本信息</div>
+                 <div class="control-group">
+                      <label class="control-label">创业项目名称<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control" maxlength="15" name="projectName" id="projectName">
+                          <div class="tip" id="projectNameError"></div>
+                      </div>
+                </div>
+                <div class="control-group">
+                      <label class="control-label">项目描述<i>*</i></label>
+                      <div class="control">
+                          <textarea name="pojectDesc" maxlength="256" id="pojectDesc">
+
+                          </textarea>
+                      </div>
+                </div>
+                <div class="control-group">
+                      <label class="control-label">用户痛点<i>*</i></label>
+                      <div class="control">
+                          <textarea  maxlength="256">
+
+                          </textarea>
+                      </div>
+                </div>
+                 <div class="control-group">
+                      <label class="control-label">项目网址或产品地址<i>*</i></label>
+                      <div class="control">
+                          <textarea maxlength="256">
+
+                          </textarea>
+                      </div>
+                </div>
+                 <div class="control-group">
+                      <label class="control-label">项目优势<i>*</i></label>
+                      <div class="control">
+                          <textarea  maxlength="256">
+
+                          </textarea>
+                      </div>
+                </div>
+                <div class="control-group">
+                      <label class="control-label">项目进展规划</label>
+                      <div class="control">
+                          <textarea maxlength="256" name="" cols="30" rows="10"  placeholder="（盈利情况、用户数、下载量等相关数据，如有，请说明）"></textarea>
+                      </div>
+                </div>
+                 <div class="control-group input-w-260 f-l mg-r-20">
+                      <label class="control-label">希望融资金额<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control">
+                      </div>
+                </div>
+                <div class="control-group input-w-260 f-l mg-r-20">
+                      <label class="control-label">出让股权比例<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control">
+                      </div>
+                </div>
+                <div class="control-group input-w-260 f-l">
+                      <label class="control-label">融资阶段<i>*</i></label>
+                      <div class="control">
+                          <input type="text" class="form-control">
+                      </div>
+                </div>
+                <div class="control-group">
+                      <label class="control-label">商业计划书<i>*</i></label>
+                      <div class="control">
+                         <input type="file"  name="files" style="display: none;"  multiple="multiple" onchange="selectFile(this)">
+                         <a class="btn btn-upload"   id="uploadBtn">上传文件</a> 
+                         <span id="fileName"></span>
+                      </div>
+                </div>
+                 <div class="control-group mg-t-50">
+                        <a class="btn btn-w-140" id="submitBtn">确认提交</a>
+                 </div>
+            </form>
+        </div>
+        <!-- ==========================完成====================-->
+
+        <div class="third"  style="display:none;">
+            <div><img src="../img/success.png" alt="" class="img"></div>
+            <div class="title mg-t-30">提交成功，我们会尽快与您联系</div>
+            <div>
+              <div class="control-group mg-t-37">
+                     <div class="controls">
+                          <a href="index.html">  <button class="btn  btn-w-160">返回首页</button></a>
+                    </div>
+               </div>
+            </div>
+         </div>
+
+    </div>
+    <footer class="footer">
+        <div class="row footer-more">
+            <div class="fl-left col-baseline  footer-item">
+                <img src="../img/logo.png">
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>协议与帮助</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>用户注册协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>隐私协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹用户协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹服务协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>奉献揭示及免责声明</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>新手帮助和案例</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>关于我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>关于我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>《一块投吧》节目</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>节目报名</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>向日葵传媒</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>联系我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>联系我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>电话：010-53670611</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>邮箱：asdfas@xxx.com</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>微信：yikuaitouba</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>微信公众号</h4>
+                <img src="../img/logo.png">
+            </div>
+        </div>
+        <div class="row text-center text-muted ">
+            <p>北京科技有限公司 京ICP备</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+

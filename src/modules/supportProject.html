@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>一块投吧</title>
+    <meta name="description" content="We founded Geek Zoo Studio in 2009. Since then, we've launched over hundreds of web sites and mobile apps. We provide our clients with holistic solutions that include visual identity, user interface, information architecture, logic flow, user experience, visual effects, front-end coding, and programming framework, we believe that passion, ingenuity and flexibility has been the key to our continued success.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/city-picker.css">
+
+
+
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src='../js/lib/city-picker.data.js'></script>
+    <script src='../js/lib/city-picker.js'></script>
+    <script src='../js/lib/main.js'></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../js/supportProject.js"></script>
+    <!--[if lte IE 8]>
+    <script src="../dist/js/respond.min.js"></script>
+    <script src="../dist/js/html5shiv.js"></script>
+    <script src='../dist/js/html5media.js'></script>
+    <script src='../dist/js/video.js'></script>
+
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top bg-cl-474C52" role="navigation">
+            <div class="container" id="ie8">
+                <div class="navbar-header" style="float:left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand left" href="index.html"><img src="../img/logo.png" alt="" class="mg-t-f-5"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse" style="display:block">
+                    <ul class="nav navbar-nav">
+                        <li style="float:left">
+                            <a href="login.html" class="mg-t-f-2"><img src="../img/profile.png" href="login.html"></a>
+                        </li>
+                        <li style="float:left"><img src="../img/message.png" class="mg-t-5"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="creat-project support-project">
+        <span class="top">
+            <ul class="nav nav-tabs font-se-14">
+                <li role="presentation"  class="active">01.确认信息</li>
+                <img src="../img/bar.png" alt="">
+                <li role="presentation">02.支付订单</li>
+                <img src="../img/bar.png" class="img2" alt="">
+                <li role="presentation">03.订单完成</li>
+            </ul>
+        </span>
+        <div class="basic-info confirm-message box">
+            <div class="title">
+                <p>云智能空气净化器</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money adress">
+                <div class="text f-l mg-r-40">
+                    <p class="">收货信息</p>
+                </div>
+                <div class="empty-address f-l" style="display:none">
+                    <img src="../img/address_sel_bg.png" alt="" class="bg-pic">
+                    <div><img src="../img/icon_infor.png" alt="" class="f-l">
+                        <p class="f-l">您还没有收货信息，<i class="font-cl-3EC9A7">单击创建</i></p>
+                    </div>
+                </div>
+                <div class="has-address f-l" style="width:890px">
+                    <div class="sel-address f-l mg-l-15">
+                        <img src="../img/address_sel_bg.png" alt="" class="address-bg">
+                        <div class="con-address">
+                            <div class="txt p-l-20 p-r-22">
+                                <img src="../img/sel_right.png" class="f-r" alt="">
+                                <p class="font-cl-3B4040 txt1 font-se-20">周滔</p>
+                                <p class="font-cl-3B4040 txt2 font-se-14">18685230885</p>
+                                <p class="font-cl-3B4040 txt3 font-se-14">北京市朝阳区 朝外SOHO A座807</p>
+                                <p class="font-cl-A3A3A3 txt4 font-se-14">100000</p>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="checkbox-2" class="f-l checkbox-1 change-address" checked="checked" />
+                                <label for="checkbox-2" class="f-l"></label>
+                                <p class="f-l">默认地址</p>
+                                <img src="../img/delete.png" alt="" class="f-r cur-poi" onclick=del(event)>
+                                <img src="../img/edit.png" alt="" class="f-r mg-r-20 cur-poi" onclick=addAddress()>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sel-address f-l mg-l-15">
+                        <img src="../img/address_bg.png" alt="" class="address-bg">
+                        <div class="con-address">
+                            <div class="txt p-l-20 p-r-22">
+                                <p class="font-cl-3B4040 txt1 font-se-20">周滔</p>
+                                <p class="font-cl-3B4040 txt2 font-se-14">18685230885</p>
+                                <p class="font-cl-3B4040 txt3 font-se-14">北京市朝阳区 朝外SOHO A座807</p>
+                                <p class="font-cl-A3A3A3 txt4 font-se-14">100000</p>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="checkbox-3" class="f-l checkbox-1 change-address" />
+                                <label for="checkbox-3" class="f-l"></label>
+                                <p class="f-l">默认地址</p>
+                                <img src="../img/delete.png" alt="" class="f-r cur-poi" onclick=del(event)>
+                                <img src="../img/edit.png" alt="" class="f-r mg-r-20 cur-poi" onclick=addAddress()>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sel-address f-l mg-l-15">
+                        <img src="../img/address_bg.png" alt="" class="address-bg">
+                        <div class="con-address">
+                            <div class="txt p-l-20 p-r-22">
+                                <p class="font-cl-3B4040 txt1 font-se-20">周滔</p>
+                                <p class="font-cl-3B4040 txt2 font-se-14">18685230885</p>
+                                <p class="font-cl-3B4040 txt3 font-se-14">北京市朝阳区 朝外SOHO A座807</p>
+                                <p class="font-cl-A3A3A3 txt4 font-se-14">100000</p>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="checkbox-4" class="f-l checkbox-1 change-address" />
+                                <label for="checkbox-4" class="f-l"></label>
+                                <p class="f-l">默认地址</p>
+                                <img src="../img/delete.png" alt="" class="f-r cur-poi" onclick=del(event)>
+                                <img src="../img/edit.png" alt="" class="f-r mg-r-20 cur-poi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sel-address f-l mg-l-15">
+                        <img src="../img/address_bg.png" alt="" class="address-bg">
+                        <div class="con-address">
+                            <div class="txt p-l-20 p-r-22">
+                                <p class="font-cl-3B4040 txt1 font-se-20">周滔</p>
+                                <p class="font-cl-3B4040 txt2 font-se-14">18685230885</p>
+                                <p class="font-cl-3B4040 txt3 font-se-14">北京市朝阳区 朝外SOHO A座807</p>
+                                <p class="font-cl-A3A3A3 txt4 font-se-14">100000</p>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="checkbox-5" class="f-l checkbox-1 change-address" />
+                                <label for="checkbox-5" class="f-l"></label>
+                                <p class="f-l">默认地址</p>
+                                <img src="../img/delete.png" alt="" class="f-r cur-poi" onclick=del(event)>
+                                <img src="../img/edit.png" alt="" class="f-r mg-r-20 cur-poi">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="support-money adress comments">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="agree">
+                <input type="checkbox" id="checkbox-1" class="f-l" checked="checked" />
+                <label for="checkbox-1" class="f-l"></label>
+                <p class="f-l">我已阅读并同意 <a href="supportAgreement.html" class="font-cl-F28B41">《支持者协议》</a></p>
+            </div>
+            <div class="next-step">
+                <button id="next-step">下一步</button>
+            </div>
+            <div class="support-money adress risk">
+                <div class="text f-l">
+                    <p>风险说明</p>
+                </div>
+                <div class="risk-mess f-l">
+                    <p>1.本平台仅提供相关服务，众筹关系存在于项目发起人和支持者之间，本平台作为第三方不是项目发起人和支持者中的任何一方。 </p>
+                    <p>2.回报发放、发票及报修等后续服务由项目发起人负责。</p>
+                    <p>3.项目众筹结束的日期并不代表项目回报发放日期。</p>
+                    <p>4.如果存在纯支持档位，一旦支付成功，除项目取消情况外不予退款。</p>
+                    <p>5.纯支持或抽奖档位，项目发起人可能不会给您发送回报。</p>
+                    <p>6.投资有风险，购买需谨慎。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="row footer-more">
+            <div class="fl-left col-baseline  footer-item">
+                <img src="../img/logo.png">
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>协议与帮助</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>用户注册协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>隐私协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹用户协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹服务协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>奉献揭示及免责声明</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>新手帮助和案例</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>关于我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>关于我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>《一块投吧》节目</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>节目报名</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>向日葵传媒</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>联系我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>联系我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>电话：010-53670611</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>邮箱：asdfas@xxx.com</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>微信：yikuaitouba</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>微信公众号</h4>
+                <img src="../img/logo.png">
+            </div>
+        </div>
+        <div class="row text-center text-muted ">
+            <p>北京科技有限公司 京ICP备</p>
+        </div>
+    </footer>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <p>你确定要删除吗？</p>
+                <div class="modal-footer">
+                    <button type="button" class="cancel f-l" data-dismiss="modal">取消</button>
+                    <button type="button" class="confirm f-l" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cover">
+        <div class="add-modal">
+            <span class='close' onclick=closeAddress()></span>
+            <form action="">
+                <p style="margin-top: 0;">所在地区<i>*</i></p>
+                <div style="position: relative;">
+                    <input id="city-picker3" class="form-control" readonly type="text" placeholder="江苏省/常州市/溧阳市" data-toggle="city-picker">
+                </div>
+                <p>详细地址<i>*</i></p>
+                <textarea name="" id="detail" cols="30" rows="10"></textarea>
+                <p>邮政编码</p>
+                <input type="text" placeholder="如能不清楚邮政编码，请写000000">
+                <div class="twoLines">
+                    <div class="f-l mg-r-20">
+                        <p class="f-l">收货人姓名<i>*</i></p>
+                        <input type="text" id='shipper-name'>
+                    </div>
+                    <div class="f-l">
+                        <p class="f-l">手机号码<i>*</i></p>
+                        <input type="text" id='shipper-tel'>
+                    </div>
+                </div>
+            </form>
+            <div class="btns">
+                <button onclick=closeAddress()>取消</button>
+                <button style="background-color: #3EC9A7" class='complete'>确定</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+(function() {
+    $(".proCitySelAll").click(function(event) {
+        if ($("body").data("CitysAll") == null) {
+            sendAllCitiesAjax();
+        }
+        $(this).select();
+        $(".provinceCity").hide();
+        $(".provinceCityAll").hide();
+        $("#dimCityQuery").hide();
+        $(".provinceCityAll").css("top", '130px').css("left", '60px').toggle();
+        $(".provinceCityAll").click(function(event) {
+            event.stopPropagation();
+        });
+        event.stopPropagation();
+        $("html").click(function() {
+            $(".provinceCityAll").hide();
+        });
+        $("input.proCitySelAll").removeClass("current2");
+        $(this).addClass("current2");
+        $(".provinceCityAll").find(".tabs").find("a").removeClass("current");
+        $(".provinceCityAll").find(".tabs").find("a[tb=hotCityAll]").addClass("current");
+        $(".provinceCityAll").find(".con").children().hide();
+        $(".provinceCityAll").find(".con").find(".hotCityAll").show();
+        if ($("body").data("allProvinces") == null) {
+            sendAllProvinceAjax();
+        }
+        if ($("body").data("allCountys") == null) {
+            sendAllCountiesAjax();
+        }
+        $(".provinceCityAll").find(".tabs").find("a").click(function() {
+            if ($(this).attr("tb") == "cityAll" && $(".provinceAll .list .current").val() == null) {
+                return;
+            };
+            if ($(this).attr("tb") == "countyAll" && $(".cityAll .list .current").val() == null && $(".hotCityAll .list .current").val() == null) {
+                return;
+            };
+            $(".provinceCityAll").find(".tabs").find("a").removeClass("current");
+            $(this).addClass("current");
+            var tb = $(this).attr("tb");
+            $(".provinceCityAll").find(".con").children().hide();
+            $(".provinceCityAll").find(".con").find("." + tb).show();
+        });
+    });
+})();
+</script>

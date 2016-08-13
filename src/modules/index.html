@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>一块投吧</title>
+    <meta name="description" content="We founded Geek Zoo Studio in 2009. Since then, we've launched over hundreds of web sites and mobile apps. We provide our clients with holistic solutions that include visual identity, user interface, information architecture, logic flow, user experience, visual effects, front-end coding, and programming framework, we believe that passion, ingenuity and flexibility has been the key to our continued success.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <!--[if lte IE 9]>
+    <script src="../dist/js/respond.min.js"></script>
+    <script src="../dist/js/html5shiv.js"></script>
+    <script src='../dist/js/html5media.js'></script>
+    <script src='../dist/js/video.js'></script>
+
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <div class="banner-bg">
+                <!--[if lt IE 9]>
+                <img src="../img/demo.jpg" alt="">
+                <![endif]-->
+                <video autoplay loop muted id="video" class="video" width="100%" height="700px">
+                    <source src="../video/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <div class="container" id="ie8">
+                <div class="navbar-header" style="float:left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand left" href="index.html"><img src="../img/logo.png" alt="" class="mg-t-f-5"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse" style="display:block">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html" style="float:left">首页</a></li>
+                        <li><a href="createProject.html" style="float:left">发起项目</a></li>
+                        <li><a href="applyProject.html" style="float:left">节目报名</a></li>
+                        <li class="search-nav" style="float:left">
+                            <span class="search-icon"><img src="../img/search.png"></span>
+                            <input type="text" class="form-control  search-input" id="search">
+                        </li>
+                        <li style="float:left" >
+                            <a href="admin/projectCenter.html" style="width:52px" class="mg-t-f-2"><img src="../img/profile.png" href="admin/projectCenter.html"></a>
+                        </li>
+                        <li style="float:left"><a href="#" class="mg-t-f-2"><img src="../img/message.png"></a></li>
+                        <!-- 以下是未登录状态显示的代码 -->
+                        <!-- <li style="float:left">
+                            <a href="login.html" class="mg-t-f-2">登录</a>
+                        </li style="float:left">
+                        <li><a href="register.html" class="mg-t-f-2">注册</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="project">
+            <ul class="project-list mg-t-10">
+                <li class="item"><span>本期视频</span><img src="../img/video1.png"> </li>
+                <li class="item"><span style="background-color: #A4A4A4">上期视频</span><img src="../img/video2.png"> </li>
+            </ul>
+        </div>
+        <div class="content-tab row mg-t-20">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a>最新故事</a>
+                    <!-- <div></div> -->
+                </li>
+                <li role="presentation"><a>推荐故事</a></li>
+                <li role="presentation"><a>众筹结束</a></li>
+            </ul>
+        </div>
+        <div class="project">
+            <ul class="story-list">
+                <li class="story-item row">
+                    <div class="left"><img src="../img/list_img.png"> </div>
+                    <div class="right">
+                        <div class="row">
+                            <h3 class="title">Super Geek</h3></div>
+                        <div class="row desc">特殊人群的手表</div>
+                        <div class="row time">2016-5-24</div>
+                        <div class="row infos">
+                            <ul>
+                                <li><img src="../img/schedule.png">已经达成：60%</li>
+                                <li><img src="../img/money.png">已筹得：32,829元</li>
+                                <li><img src="../img/time.png">剩余时间：33天</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="story-item row">
+                    <div class="left"><img src="../img/list_img.png"> </div>
+                    <div class="right">
+                        <div class="row">
+                            <h3 class="title">瘦马科技</h3></div>
+                        <div class="row desc">云智能空气净化器</div>
+                        <div class="row time">2016-5-24</div>
+                        <div class="row infos">
+                            <ul>
+                                <li><img src="../img/schedule.png">已经达成：60%</li>
+                                <li><img src="../img/money.png">已筹得：32,829元</li>
+                                <li><img src="../img/time.png">剩余时间：33天</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="story-item row">
+                    <div class="left"><img src="../img/list_img.png"> </div>
+                    <div class="right">
+                        <div class="row">
+                            <h3 class="title">云中的家</h3></div>
+                        <div class="row desc">家庭影院3.0</div>
+                        <div class="row time">2016-5-24</div>
+                        <div class="row infos">
+                            <ul>
+                                <li><img src="../img/schedule.png">已经达成：60%</li>
+                                <li><img src="../img/money.png">已筹得：32,829元</li>
+                                <li><img src="../img/time.png">剩余时间：33天</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="story-item row">
+                    <div class="left"><img src="../img/list_img.png"> </div>
+                    <div class="right">
+                        <div class="row">
+                            <h3 class="title">Super Geek</h3></div>
+                        <div class="row desc">特殊人群的手表</div>
+                        <div class="row time">2016-5-24</div>
+                        <div class="row infos">
+                            <ul>
+                                <li><img src="../img/schedule.png">已经达成：60%</li>
+                                <li><img src="../img/money.png">已筹得：32,829元</li>
+                                <li><img src="../img/time.png">剩余时间：33天</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="more">
+            <button class="btn moreBtn">查看更多</button>
+        </div>
+    </div>
+    <img src="../img/top.png" class="gototop" alt="">
+    <footer class="footer">
+        <div class="row footer-more">
+            <div class="fl-left col-baseline  footer-item">
+                <img src="../img/logo.png">
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>协议与帮助</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>用户注册协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>隐私协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹用户协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹服务协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>奉献揭示及免责声明</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>新手帮助和案例</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>关于我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>关于我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>《一块投吧》节目</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>节目报名</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>向日葵传媒</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>联系我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>联系我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>电话：010-53670611</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>邮箱：asdfas@xxx.com</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>微信：yikuaitouba</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>微信公众号</h4>
+                <img src="../img/QRcode.png">
+            </div>
+        </div>
+        <div class="row text-center text-muted ">
+            <p>北京科技有限公司 京ICP备</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>一块投吧</title>
+    <meta name="description" content="We founded Geek Zoo Studio in 2009. Since then, we've launched over hundreds of web sites and mobile apps. We provide our clients with holistic solutions that include visual identity, user interface, information architecture, logic flow, user experience, visual effects, front-end coding, and programming framework, we believe that passion, ingenuity and flexibility has been the key to our continued success.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../js/orderDetail.js"></script>
+    <!--[if lte IE 8]>
+    <script src="../dist/js/respond.min.js"></script>
+    <script src="../dist/js/html5shiv.js"></script>
+    <script src='../dist/js/html5media.js'></script>
+    <script src='../dist/js/video.js'></script>
+
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top bg-cl-474C52" role="navigation">
+            <div class="container" id="ie8">
+                <div class="navbar-header" style="float:left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand left" href="index.html"><img src="../img/logo.png" alt="" class="mg-t-f-5"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse" style="display:block">
+                    <ul class="nav navbar-nav">
+                        <li style="float:left">
+                            <a href="login.html" class="mg-t-f-2"><img src="../img/profile.png" href="login.html"></a>
+                        </li>
+                        <li style="float:left"><img src="../img/message.png" class="mg-t-5"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 买家等待发货状态 -->
+    <div class="creat-project support-project  order-details">
+        <div class="basic-info confirm-message details">
+            <div class="title">
+                <p class="font-cl-2F2C2C font-se-16">特殊人群的手表</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money address-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <p>收件人：<i>周滔</i></p>
+                    <p>手机号：<i>13312345678</i></p>
+                    <p>收货地址：<i style="margin-left: 20px">北京市朝阳区 朝外soho A 座807</i></p>
+                </div>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <p></p>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>订单状态：<i>待发货</i></p>
+                        <p>订单号：<i style="margin-left: 34px">123124123124123</i></p>
+                        <p>下单时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>付款时间：<i>2016-5-28 14:32:32</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 买家待支付状态 -->
+    <div class="creat-project support-project  order-details">
+        <div class="basic-info confirm-message details">
+            <div class="title">
+                <p class="font-cl-2F2C2C font-se-16">特殊人群的手表</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money address-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <p>收件人：<i>周滔</i></p>
+                    <p>手机号：<i>13312345678</i></p>
+                    <p>收货地址：<i style="margin-left: 20px">北京市朝阳区 朝外soho A 座807</i></p>
+                </div>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <p></p>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess wait-pay">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>订单状态：<i>待支付</i></p>
+                        <p>订单号：<i style="margin-left: 34px">123124123124123</i></p>
+                        <p style="margin-bottom: 30px;">下单时间：<i>2016-5-28 14:32:32</i></p>
+                        <a href="payment.html">
+                            <button class="bg-cl-3EC9A7">立即支付</button>
+                        </a>
+                        <a onclick=cancelOrder(event,'您确定取消订单么')>
+                            <button class="bg-cl-F28B41" >取消订单</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 买家已发货状态 -->
+    <div class="creat-project support-project  order-details">
+        <div class="basic-info confirm-message details">
+            <div class="title">
+                <p class="font-cl-2F2C2C font-se-16">特殊人群的手表</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money address-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <p>收件人：<i>周滔</i></p>
+                    <p>手机号：<i>13312345678</i></p>
+                    <p>收货地址：<i style="margin-left: 20px">北京市朝阳区 朝外soho A 座807</i></p>
+                </div>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <p></p>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess has-send">
+                <div class="text f-l">
+                    <p>订单信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>订单状态：<i>已发货</i></p>
+                        <p>订单号：<i style="margin-left: 34px">123124123124123</i></p>
+                        <p>下单时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>付款时间：<i>2016-5-28 14:32:32</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess express-mess">
+                <div class="text f-l">
+                    <p>物流信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>快递单号：<i>已发货</i></p>
+                        <p>发货时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>物流备注：<i>2016-5-28 14:32:32</i></p>
+                        <a onclick=cancelOrder(event,'您确定申请退货吗')>
+                            <button class="bg-cl-3EC9A7">申请退货</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 卖家待发货状态 -->
+    <div class="creat-project support-project  order-details">
+        <div class="basic-info confirm-message details">
+            <div class="title">
+                <p class="font-cl-2F2C2C font-se-16">特殊人群的手表</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money address-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <p>收件人：<i>周滔</i></p>
+                    <p>手机号：<i>13312345678</i></p>
+                    <p>收货地址：<i style="margin-left: 20px">北京市朝阳区 朝外soho A 座807</i></p>
+                </div>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <p></p>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess has-send">
+                <div class="text f-l">
+                    <p>订单信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>订单状态：<i>已支付</i></p>
+                        <p>订单号：<i style="margin-left: 34px">123124123124123</i></p>
+                        <p>下单时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>付款时间：<i>2016-5-28 14:32:32</i></p>
+                        <a onclick=sendoutMess()>
+                            <button class="bg-cl-3EC9A7">现在发货</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 卖家已发货状态 -->
+    <div class="creat-project support-project  order-details">
+        <div class="basic-info confirm-message details">
+            <div class="title">
+                <p class="font-cl-2F2C2C font-se-16">特殊人群的手表</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money address-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <p>收件人：<i>周滔</i></p>
+                    <p>手机号：<i>13312345678</i></p>
+                    <p>收货地址：<i style="margin-left: 20px">北京市朝阳区 朝外soho A 座807</i></p>
+                </div>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <p></p>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess has-send">
+                <div class="text f-l">
+                    <p>订单信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>订单状态：<i>已发货</i></p>
+                        <p>订单号：<i style="margin-left: 34px">123124123124123</i></p>
+                        <p>下单时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>付款时间：<i>2016-5-28 14:32:32</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess express-mess">
+                <div class="text f-l">
+                    <p>物流信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>快递单号：<i>已发货</i><i style='margin-left: 155px;color: #45C8A7;cursor: pointer;' onclick=sendoutMess()>修改发货信息</i></p>
+                        <p>发货时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>物流备注：<i>2016-5-28 14:32:32</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 取消退货 -->
+    <div class="creat-project support-project  order-details">
+        <div class="basic-info confirm-message details">
+            <div class="title">
+                <p class="font-cl-2F2C2C font-se-16">特殊人群的手表</p>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>支持金额</p>
+                </div>
+                <div class="con f-l">
+                    <p class="first">￥128</p>
+                    <p class="two">智能充电宝一个</p>
+                    <p class="last">感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个，并且您将获赠价值29元8G内存卡1张以及价值29元苹果数据线1条。睿能量智能存储移动电源有星空灰，流光金，魅惑粉颜色区分，请在众筹付款时选择。</p>
+                </div>
+            </div>
+            <div class="support-money address-mess">
+                <div class="text f-l">
+                    <p>收货信息</p>
+                </div>
+                <div class="con f-l">
+                    <p>收件人：<i>周滔</i></p>
+                    <p>手机号：<i>13312345678</i></p>
+                    <p>收货地址：<i style="margin-left: 20px">北京市朝阳区 朝外soho A 座807</i></p>
+                </div>
+            </div>
+            <div class="support-money">
+                <div class="text f-l">
+                    <p>备注信息</p>
+                </div>
+                <div class="con f-l">
+                    <p></p>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess has-send">
+                <div class="text f-l">
+                    <p>订单信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>订单状态：<i>退货中</i></p>
+                        <p>订单号：<i style="margin-left: 34px">123124123124123</i></p>
+                        <p>下单时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>付款时间：<i>2016-5-28 14:32:32</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="support-money address-mess order-mess express-mess">
+                <div class="text f-l">
+                    <p>物流信息</p>
+                </div>
+                <div class="con f-l">
+                    <div class="con f-l">
+                        <p>快递单号：<i>已发货</i></p>
+                        <p>发货时间：<i>2016-5-28 14:32:32</i></p>
+                        <p>物流备注：<i>2016-5-28 14:32:32</i></p>
+                        <a onclick=cancelOrder(event,'您确定取消退货吗')>
+                            <button class="bg-cl-3EC9A7">取消退货</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="row footer-more">
+            <div class="fl-left col-baseline  footer-item">
+                <img src="../img/logo.png">
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>协议与帮助</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>用户注册协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>隐私协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹用户协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹服务协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>奉献揭示及免责声明</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>新手帮助和案例</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>关于我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>关于我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>《一块投吧》节目</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>节目报名</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>向日葵传媒</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>联系我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>联系我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>电话：010-53670611</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>邮箱：asdfas@xxx.com</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>微信：yikuaitouba</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>微信公众号</h4>
+                <img src="../img/logo.png">
+            </div>
+        </div>
+        <div class="row text-center text-muted ">
+            <p>北京科技有限公司 京ICP备</p>
+        </div>
+    </footer>
+
+
+    <!-- 二次确认弹层 -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <p>你确定要取消订单吗？</p>
+                <div class="modal-footer">
+                    <button type="button" class="cancel f-l" data-dismiss="modal">取消</button>
+                    <button type="button" class="confirm f-l" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 发货信息弹层 -->
+    <div id="send-out">
+        <div class="add-modal">
+            <span class='close' onclick=closeMess()></span>
+            <p class='bind'>绑定新手机号</p>
+            <form action="">
+                <p>快递公司</p>
+                <input type="text">
+                <p>快递单号</p>
+                <input type="text">
+                <p>备注信息</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </form>
+            <div class="btns">
+                <button onclick=closeMess()>取消</button>
+                <button style="background-color: #3EC9A7" class='complete'>确认</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

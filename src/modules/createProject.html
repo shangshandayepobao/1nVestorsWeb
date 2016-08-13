@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>一块投吧</title>
+    <meta name="description" content="We founded Geek Zoo Studio in 2009. Since then, we've launched over hundreds of web sites and mobile apps. We provide our clients with holistic solutions that include visual identity, user interface, information architecture, logic flow, user experience, visual effects, front-end coding, and programming framework, we believe that passion, ingenuity and flexibility has been the key to our continued success.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/umeditor/_css/umeditor.css">
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src='../js/lib/uploadPreview.js'></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../js/umeditor/umeditor.config.js"></script>
+    <script src="../js/umeditor/editor_api.js"></script>
+    <script src="../js/umeditor/zh-cn.js"></script>
+   <!--  <script src="../js/lib/moxie.js"></script>
+    <script src="../js/lib/plupload.dev.js"></script>
+    <script src="../js/lib/qiniu.js"></script> -->
+    <!-- <script src="../js/lib/main.js"></script> -->
+
+    <script src="../js/creatProject.js"></script>
+
+    <!--[if lte IE 8]>
+    <script src="../dist/js/respond.min.js"></script>
+    <script src="../dist/js/html5shiv.js"></script>
+    <script src='../dist/js/html5media.js'></script>
+    <script src='../dist/js/video.js'></script>
+
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top bg-cl-474C52" role="navigation">
+            <div class="container" id="ie8">
+                <div class="navbar-header" style="float:left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand left" href="index.html"><img src="../img/logo.png" alt="" class="mg-t-f-5"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse" style="display:block">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" style="float:left">首页</a></li>
+                        <li class="active"><a href="createProject.html" style="float:left">发起项目</a></li>
+                        <li><a href="applyProject.html" style="float:left">节目报名</a></li>
+                        <li class="search-nav" style="float:left">
+                            <span class="search-icon"><img src="../img/search.png"></span>
+                            <input type="text" class="form-control  search-input" id="search">
+                        </li>
+                        <li style="float:left">
+                            <a href="login.html" class="mg-t-f-2"><img src="../img/profile.png" href="login.html"></a>
+                        </li>
+                        <li style="float:left"><img src="../img/message.png" class="mg-t-5"></li>
+                        <!-- 以下是未登录状态显示的代码 -->
+                        <!-- <li style="float:left">
+                            <a href="login.html" class="mg-t-f-2">登录</a>
+                        </li style="float:left">
+                        <li><a href="register.html" class="mg-t-f-2">注册</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="creat-project">
+        <span class="top">
+            <ul class="nav nav-tabs font-se-14">
+                <li role="presentation" class="active">1.基本信息</li>
+                <img src="../img/bar.png" alt="">
+                <li role="presentation">2.项目描述</li>
+                <img src="../img/bar.png" class="img2" alt="">
+                <li role="presentation">3.支持选项</li>
+            </ul>
+        </span>
+        <div class="basic-info box">
+            <div class="left">
+                <div class="name">
+                    <p class="tx-left f-l">项目名称<i>*</i></p>
+                    <p class="tx-right f-r">*为必填项</p>
+                    <input type="text" id="projectName" maxlength="15">
+                    <div class="tip" id="projectError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                </div>
+                <div class="profession name">
+                    <p class="tx-left f-l">所属行业<i>*</i></p>
+                    <div class="btn-group f-l mg-r-20">
+                        <select name="industry" value="" id="first-list">
+                            <option value="12312">12312</option>
+                            <option value="111111111111">111111111111</option>
+                            <option value="12345">12345</option>
+                            <option value="67890">67890</option>
+                        </select>
+                    </div>
+                    <div class="btn-group f-l">
+                        <select name="industry" value id="second-list">
+
+                        </select>
+                    </div>
+                </div>
+                <div class="profession name money mg-b-70">
+                    <div style="width:260px;float:left">
+                        <p class="tx-left f-l mg-r-20">目标金额<i>*</i></p>
+                        <input class="f-l mg-r-20" id="money" type="text" placeholder="最低限制为5,000元人民币">
+                        <div class="tip" id="moneyError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                    </div>
+                    <p class="tx-left f-r">筹资天数<i>*</i></p>
+                    <div class="btn-group f-r">
+                        <button type="button" class="btn select" data-toggle="dropdown">30天</button>
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉菜单</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a>教育</a></li>
+                            <li><a>运动</a></li>
+                            <li><a>慈善</a></li>
+                            <li><a>其他</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="name company">
+                    <p class="tx-left f-l">公司名称<i>*</i></p>
+                    <input type="text" id="companyName" maxlength="128">
+                    <div class="tip" id="companyError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                </div>
+                <div class="profession name money">
+                    <p class="tx-left f-l mg-r-20">地区<i>*</i></p>
+                    <p class="tx-left f-l">联系人<i>*</i></p>
+                    <div class="btn-group f-l mg-r-20">
+                        <button type="button" class="btn select" data-toggle="dropdown">北京市</button>
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉菜单</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a>教育</a></li>
+                            <li><a>运动</a></li>
+                            <li><a>慈善</a></li>
+                            <li><a>其他</a></li>
+                        </ul>
+                    </div>
+                    <input class="f-l" type="text" id="personName">
+                    <div class="tip" id="personError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                </div>
+                <div class="name tel">
+                    <div style="width:260px;float:left">
+                        <p class="tx-left f-l">手机号<i>*</i></p>
+                        <input type="text" id="telNum" class="f-l mg-r-20" maxlength="11">
+                        <div class="tip" id="telError"><img src="../img/warning.png" alt="">手机号不能为空</div>
+                    </div>
+                    <p class="f-r change" style="margin-top: 25px"><a href="">点击更换绑定</a></p>
+                </div>
+                <div class="name tel">
+                    <p class="tx-left f-l">邮箱</p>
+                    <input type="text" class="f-l mg-r-20">
+                    <p class="f-l change"><a href="">点击绑定邮箱</a></p>
+                </div>
+                <div class="agree">
+                    <input type="checkbox" id="checkbox-1" class="f-l" checked="checked" defaultChecked='true' />
+                    <label for="checkbox-1" class="f-l"></label>
+                    <p class="f-l">我已阅读并同意 <a href="serviceAgreement.html" target="_Blank" class="font-cl-F28B41">《众筹服务协议》</a></p>
+                </div>
+                <div class="next">
+                    <button class="f-l mg-r-20 bg-cl-474C52 before">上一步</button>
+                    <button class="f-l btn2 bg-cl-3EC9A7 nextStep">下一步</button>
+                </div>
+            </div>
+            <div class="left right f-l">
+                <div class="name pic">
+                    <p class="tx-left">封面图片<i>*</i></p>
+                    <div id="localImag1" class="mg-b-10 pos-rlt imgParent1" style="overflow: hidden;height:150px;width:180px">
+                        <img id="preview1" class="img1" style="overflow: hidden;height:150px;width:180px" src="../img/default.png">
+                        <p>缩略图</p>
+                    </div>
+                    <p class="size f-l">尺寸：宽480px 高400px</p>
+                    <p class="size f-l"> 图片格式：jpg、png、gif</p>
+                    <div class="upload-file">
+                        上传图片
+                        <input type="file" name="file" id="doc1" class="upload">
+                    </div>
+                </div>
+                <div class="name pic">
+                    <p class="tx-left">详情页面头图<i>*</i></p>
+                    <div id="localImag2" class="mg-b-10 pos-rlt imgParent1" style="height:200px;width:300px">
+                        <img id="preview2" class="img1" style="overflow: hidden;height:200px;width:300px" src="../img/default.png" >
+                        <p style="top:92px;left:130px">缩略图</p>
+                    </div>
+                    <p class="size f-l">尺寸：宽1200px 高800px</p>
+                    <p class="size f-l"> 图片格式：jpg、png、gif</p>
+                    <div class="upload-file">
+                        上传图片
+                        <input type="file" name="file" id="doc2" class="upload">
+                    </div>
+
+                    <script>
+                         new uploadPreview({ UpBtn: "doc1", DivShow: "localImag1", ImgShow: "preview1",Width:180,Height:150});
+                         new uploadPreview({ UpBtn: "doc2", DivShow: "localImag2", ImgShow: "preview2",Width:300,Height:200 });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="pro-desc box" style="display:none">
+            <div class="name">
+                <p class="tx-left f-l">视频链接</p>
+                <input class="f-l" type="text">
+                <p class="tx-left f-l link">用视频的方式介绍你的项目，让用户更快的了解你的项目</p>
+            </div>
+            <div class="desc">
+                <p>项目描述<i>*</i></p>
+                <textarea id="myEditor" class="editor" style="width:1044px;height:434px;">
+                    <p>1. 您在做的事情是什么（项目介绍）。</p>
+                    <p>2. 您现在做到什么程度了（项目进度），以及未来计划。</p>
+                    <p>3. 您的项目的亮点（有别于其他竞品的明显优势，但我们不建议您填写贬低竞品的言语）。</p>
+                    <p>4. 您的项目面临的风险（能让支持者对自己将承担的风险做好心理准备）。</p>
+                    <p>5. 您的团队介绍以及一些可以证明您团队可以胜任目前工作的客观事实。</p>
+                    <p>6. Q&A（一些您经常会被问到的问题及解答）。
+                    </p>
+                </textarea>
+                <p class="demo">不知道怎么写？看看项目填写规范及示例。<i class="font-cl-3EC9A7" data-toggle="modal" data-target="#myModal">点击查看</i></p>
+                <div class="next f-r mg-t-20">
+                    <button class="f-l mg-r-20 bg-cl-474C52 before">上一步</button>
+                    <button class="f-l btn2 bg-cl-3EC9A7 nextStep">下一步</button>
+                </div>
+            </div>
+            <script type="text/javascript">
+            var um = UM.getEditor('myEditor');
+
+            um.addListener('focus', function() {
+                $('#myEditor').html('');
+            });
+            </script>
+        </div>
+        <div class="pro-apply box" style="display:none">
+            <div class="message">
+                <p>请设置至少 3 档与项目有直接关联的回报。</p>
+            </div>
+            <!--  <div class="cont pos-rlt" >
+                <div class="edit">
+                    <div class="text f-l">
+                        <i>￥99.00</i>
+                        <p class="mg-r-20">限定人数：2000</p>
+                        <p>回报时间：众筹结束后20天左右</p>
+                    </div>
+                    <div class="icon f-r">
+                        <img src="../img/edit.png" data-toggle="modal" data-target="#myModal2" alt="">
+                        <p>编辑</p>
+                        <img src="../img/delete.png" alt="">
+                        <p>删除</p>
+                    </div>
+                </div>
+                <div class="bottom ">
+                    <p>169元移动电源1个</p>
+                    <p>感谢您对睿禾科技的支持！您将获得价值169元睿能量智能存储移动电源1个。</p>
+                    <img src="../img/list_img.png" alt="">
+                </div>
+                <div class="mess pos-abt">请设置至少 3 档与项目有直接关联的回报。</div>
+            </div> -->
+            <div class="other">
+                <button class="add" data-toggle="modal" data-target="#myModal2">添加新回报</button>
+                <div class="next f-r">
+                    <button class="f-l mg-r-20 bg-cl-474C52 before">上一步</button>
+                    <button class="f-l btn2 bg-cl-3EC9A7 nextStep">提交审核</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="row footer-more">
+            <div class="fl-left col-baseline  footer-item">
+                <img src="../img/logo.png">
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>协议与帮助</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>用户注册协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>隐私协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹用户协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>众筹服务协议</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>奉献揭示及免责声明</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>新手帮助和案例</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline  footer-item">
+                <h4>关于我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>关于我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>《一块投吧》节目</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>节目报名</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>向日葵传媒</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>联系我们</h4>
+                <ul>
+                    <li class="text-muted text-left">
+                        <a>联系我们</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>电话：010-53670611</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>邮箱：asdfas@xxx.com</a>
+                    </li>
+                    <li class="text-muted text-left">
+                        <a>微信：yikuaitouba</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl-left col-baseline   footer-item">
+                <h4>微信公众号</h4>
+                <img src="../img/logo.png">
+            </div>
+        </div>
+        <div class="row text-center text-muted ">
+            <p>北京科技有限公司 京ICP备</p>
+        </div>
+    </footer>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="height:500px; overflow-y:auto;padding-top:0px; ">
+            <div class="modal-content pos-rlt">
+                <div class="modal-header">
+                    <button type="button" class="close pos-abt" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p class="font-se-20">项目介绍</p>
+                    <p>Apple Watch 是苹果公司于2014年9月公布的一款智能手表，有Apple Watch、Apple Watch Sport 和Apple Watch Edition 三种风格不同的系列。Apple Watch 采用人造蓝宝石水晶屏幕与Force Touch触摸技术，有多种颜色可供选择。
+                    </p>
+                    <p>最近亮相的Apple Watch标志着苹果公司进入蓬勃发展的可穿戴市场。科技巨头希望售价349美元的Apple Watch能在价值数十亿美元的可穿戴市场空间占据优势。
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <img src="../img/watch.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <p class="font-se-20">项目进度</p>
+                    <p>Apple Watch Sport 共10款：起价为2588元，最高2988元；Apple Watch 共20款，起价为4188元，最高8288元；Apple Watch Edition 共8款，起价为74800元，最高126800元。三个系列都于2015年4月10日接受预定，4月24日起正式发售。首发地区包括中国大陆、中国香港、美国、日本、英国、法国、加拿大、澳大利亚。Apple Watch 于2015年4月10日开放试戴预约。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content pos-rlt">
+                <div class="modal-header">
+                    <button type="button" class="close pos-abt" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p>*为必填项目</p>
+                </div>
+                <div class="modal-body">
+                    <form id="modal-form">
+                        <div class="formgroup">
+                            <div class="mony">
+                                <p>支持金额<i>*</i></p>
+                                <label for="money">元</label>
+                                <input type="text" name="money" id="supportMoney">
+                                <div class="tip" id="supportMoneyError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                            </div>
+                            <div class="mony">
+                                <p>限定人数<i>*</i></p>
+                                <label for="money">位</label>
+                                <input type="text" name="money" id="limitNum">
+                                <div class="tip" id="limitNumError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                            </div>
+                            <div class="mony" style="margin-right: 0">
+                                <p>回报时间<i>*</i></p>
+                                <input type="text" id="repayTime">
+                                <div class="tip" id="repayTimeError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                            </div>
+                            <p>具体回报<i>*</i></p>
+                            <input id="repayCon" class="mg-b-20" style="margin-bottom:0" type="text" placeholder="以最简单的方式描述回报的具体内容，让用户一看就知道回报的东西是什么。最多25字，包括标点" maxlength="25">
+                            <div class="tip" id="repayConError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                            <p style="margin-top:20px">回报描述<i>*</i></p>
+                            <textarea maxlength="256" style="margin-bottom:0" name="" cols="30" rows="10" id="repayDesc" placeholder="你可以对你的回报进行简单的描述，不能超过256个字符"></textarea>
+                            <div class="tip" id="repayDescError"><img src="../img/warning.png" alt="">公司名称不能为空</div>
+                            <div class="name pic" style="margin-top:20px">
+                                <p class="tx-left">相关图片<i>*</i></p>
+                                <div id="localImag3" class="mg-b-10 pos-rlt imgParent1" style="height: 120px;width: 120px;">
+                                    <img id="preview3" class="img1" src="../img/default.png"  style="display: block; background-color: #FAFAFA">
+                                    <p>缩略图</p>
+                                </div>
+                                <div class="upload-file">
+                                    上传图片
+                                    <input type="file" name="file" id="doc3" class="upload" onchange="javascript:upPreviewImg('doc3','preview3',120,120,400,400);">
+                                </div>
+                                <p class="size f-l">尺寸：400px*400px，</p>
+                                <p class="size f-l">支持jpg、png、gif等常用格式</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="next">
+                        <button data-dismiss="modal" class="f-l mg-r-20 bg-cl-474C52" style="margin-left:200px;width:140px">取消</button>
+                        <button class="f-l btn2 bg-cl-3EC9A7 modal-submit" style="width:140px">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <p>你确定要删除吗？</p>
+                <div class="modal-footer">
+                    <button type="button" class="cancel f-l" data-dismiss="modal">取消</button>
+                    <button type="button" class="confirm f-l" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
